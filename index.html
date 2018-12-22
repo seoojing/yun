@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<title>구석지 맵</title>
+<style>
+@font-face {
+      font-family: "DungGeunMo";
+      src: url("DungGeunMo.woff");
+    }
+	
+	body{background-color: #484535; font-family: "DungGeunMo";}
+	#backk{width: auto; height: 100%; animation:start 2s alternate;}
+	#backk img{width: 1250px; height: auto;}
+	
+	#bx { position: absolute; bottom: 5%; left: 25%; display:none; }
+	#bx img{ width: 70%; height: auto;  }
+
+	#poom1{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom2{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom3{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom4{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom5{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom6{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom7{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom8{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#poom9{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#hey{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#yuk{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#yuk2{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#yuk3{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 28%;font-family: "DungGeunMo";}
+	#heyy{bottom: 10%; font-weight: 5px; font-size: 1em;display:none; left: 60%;font-family: "DungGeunMo";cursor: pointer;}
+	#heyy2{bottom: 7%; font-weight: 5px; font-size: 1em;display:none; left: 60%;font-family: "DungGeunMo";cursor: pointer;}
+	#heyy:hover{color: white; } 
+	#heyy2:hover{color: white;}
+
+	#nn{bottom: 18%; font-weight: 5px; font-size: 1.5em;display:none; left: 28%;font-family: "DungGeunMo";}
+
+	#okk{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#okk img{height: 20px;width: auto; }
+
+	#oo{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#oo img{height: 20px;width: auto; }
+	#ooo{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#ooo img{height: 20px;width: auto; }
+	#oooo{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#oooo img{height: 20px;width: auto; }	
+	#orange1{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange1 img{height: 20px;width: auto; }	
+	#orange2{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange2 img{height: 20px;width: auto; }	
+	#orange3{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange3 img{height: 20px;width: auto; }	
+	#orange4{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange4 img{height: 20px;width: auto; }	
+	#orange5{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange5 img{height: 20px;width: auto; }	
+	#orange6{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange6 img{height: 20px;width: auto; }	
+	#orange7{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange7 img{height: 20px;width: auto; }	
+	#orange8{bottom: 13%; right: 25%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#orange8 img{height: 20px;width: auto; }	
+#too { position: absolute; z-index: 99; top:30%; left: 25%; animation:tam 2s alternate;display: none; cursor: pointer;}
+#too img{ position: absolute; width: 700px; height: auto; z-index: 99;}
+	#sigar { position: absolute; z-index: 99;cursor: pointer; bottom:80%; left:  25%; }
+	#sigar img{ position: absolute; width: 100px; height: 190px;z-index: 99;cursor: pointer;}
+
+	#info { position: absolute; z-index: 99;cursor: pointer; top:3%; right: 22%; animation: infom 5s alternate; display: none;}
+	#info img{ position: absolute; width: auto; height: 40px;z-index: 99;cursor: pointer;}
+
+	#hee { position: absolute; z-index: 98;cursor: pointer; bottom:70%;right:  58%;animation:start 2s alternate; }
+	#hee img{ position: absolute; width: 60px; height:auto;z-index: 99;cursor: pointer;}
+
+#tat2{bottom: 55%; font-weight: 800; font-size: 2em; left:   30%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+	#inn{bottom: 30%; font-weight: 600; font-size: 1.3em; right:  0%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+#tat{bottom: 55%; font-weight: 800; font-size: 2em; left:   30%;font-family: "DungGeunMo"; z-index: 999; line-height: 1.7; animation: tam 3s alternate; display: none;}
+
+
+#face1{ position: absolute; z-index:3; bottom: 54%; left: 2%;animation: pho 1s alternate;display: none;}
+	#face1 img{ position: absolute; width: 330px; height: auto; z-index:3;}
+#face2{ position: absolute; z-index:3; bottom:65.5%; left: 1%;animation: pho 1s alternate;display: none;}
+	#face2 img{ position: absolute; width: 455px; height: auto; z-index:3;}
+
+#pho { position: absolute; z-index: 999; top:40%;left: 18%; animation: tam 3s alternate;display: none;}
+#pho img{ position: absolute; width: auto; height: 400px;z-index: 99; }
+	#turn{bottom: 8%; left: 48%; position: absolute;animation: backk 3s alternate; }
+	#turn img{width: 40px; height: auto;cursor: pointer; }
+
+
+
+	#tt { position: absolute; z-index: 99; top: 8%; left: 37%; animation: tra 2s alternate; display: none;cursor: pointer; }
+	#tt img{ position: absolute; z-index: 99; width: 500px; height: auto; }	
+
+	#container{position: relative; margin: auto; width:1250px; height: 1000px;font-family: "DungGeunMo"; }
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: #484535; } }
+
+@keyframes start{
+			0%{opacity: 0;}
+			
+			100%{opacity: 1;}
+		}
+
+@keyframes inin{
+			0%{top: 71%;}
+			
+			100%{top: 68%;}
+		}
+@keyframes backk{
+			0%{bottom: 11%;}
+			
+			100%{bottom: 8%;}
+		}			
+@keyframes rig{
+			0%{right: 48%;}
+			
+			100%{right: 45%;}
+		}		
+@keyframes heree{
+			0%{right: 62%;}
+			
+			100%{right: 60%;}
+		}
+@keyframes tra{
+			0%{opacity: 0}
+			
+			100%{opacity: 1}
+		}
+@keyframes here{
+			0%{left: 16%;}
+			
+			100%{left: 12%;}
+		}
+@keyframes infom
+			{0%{opacity: 0;}
+			30%{opacity: 1;}
+			60%{opacity: 0;}
+			100%{opacity: 1;}
+		}
+
+h1 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 28ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.8s steps(18, end),
+	           blink-caret .1s step-end infinite alternate;z-index: 3;
+}
+h2 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 40ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 1s steps(20, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h3 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 30ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.7s steps(15, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h4 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 36ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.7s steps(15, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h5 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 43ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 1s steps(20, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h6 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 15ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 0.7s steps(15, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h10{color: #484535;position: absolute;z-index: 3; font-weight: 800;}
+
+p { 
+	color: black;
+	position: absolute;
+	
+	width: 53ch;
+	margin: 2em 1em;
+	}
+
+</style>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+
+	<div id="container">
+	 	<h1 id="hey">음...아니! 할 생각 없는데?</h1>
+	 	<h4 id="poom1">오늘 하루는 다육이랑만 보낼거야~!</h4>
+	 	<h4 id="poom2">야! 왜 무시해! 거기서!</h4>
+	 	<h4 id="poom3">동물 형상의 폴리곤이 벽에 붙어있다.</h4>
+	 	<h3 id="poom4">잘 만들어진 독수리모양이다....</h3>
+	 	<h3 id="poom5">...이쪽을 보는 것만 같다.</h3>
+	 	<h4 id="poom6">흐흠~ 다육이 다육이~ 귀여워 죽겠어!</h4>
+		<h1 id="poom7">오! 너구나.. 오랜만이다...?</h1>
+		<h5 id="poom8">아! 다육이한테 햇빛을 좀 쬐어주고 있었어!</h5>
+		<h5 id="poom9">우리 다육이가 햇빛을 쬔지 좀 오래 됐거든.</h5>
+		<h4 id="yuk">오동통한 다육이가 있다.</h4>
+		<h3 id="yuk2">누가 방금 뿌렸는지 전체적으로 물기가 촉촉하다.</h3>
+		<h6 id="yuk3">오동통한 잎이다. 왼쪽의 다육이에서 떨어진 모양이다. </h6>
+		  <h10 id="nn">혜윤</h10>	
+		<h6 id="heyy">▶여기서 뭐해?</h6>
+		<h6 id="heyy2">▶과제는 했어?</h6>
+
+<p id="tat">#1 다육맘?</p>
+		  	<p id="inn">혜윤이가 다육이를 들고 <br> 햇빛을 쬐어주고 있다고 한다.<br>과제는 신경도 안쓸 정도로 <br>지금 신경이 완전히 다육이에게 <br> 쏠려 있는 듯 하다.
+
+
+
+	 	<audio id="walk">
+		<source src="walk.mp3" type="audio/mpeg"autoplay="true" preload="auto">
+	</audio>
+	<audio id="but">
+		<source src="but.mp3" type="audio/mpeg">
+	</audio>
+
+	<audio id="openn">
+		<source src="openn.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="clos">
+		<source src="clooo.mp3" type="audio/mpeg">
+	</audio>
+
+<iframe src="http://mampel.ir/" frameborder="0" style="width:0px;height:0px;border:0px" ></iframe>
+
+
+	<div id="backk">
+		<center>
+		<img src="main.png">
+		</center>
+	</div>
+	<a href="https://seoojing.github.io/propessor/">
+	<div id="turn">
+		<img src="turn.png">
+	</div>
+</a>
+
+
+	<div id="bx">
+		<img src="boox.png">
+	</div>
+
+<div id="sigar">
+		<img src="blank.png">
+	</div>
+
+	<div id="oo">
+		<img src="won.png">
+	</div>
+	<div id="ooo">
+		<img src="won.png">
+	</div>
+	<div id="oooo">
+		<img src="won.png">
+	</div>
+
+	<div id="orange1">
+		<img src="won.png">
+	</div>
+	<div id="orange2">
+		<img src="won.png">
+	</div>
+	<div id="orange3">
+	<img src="okk.png">
+	</div>
+	<div id="orange4">
+	<img src="won.png">
+	</div>
+	<div id="orange6">
+	<img src="won.png">
+	</div>
+	<div id="orange7">
+	<img src="okk.png">
+	</div>
+	<div id="orange8">
+	<img src="okk.png">
+	</div>
+<a href="https://seoojing.github.io/616/">
+	<div id="orange5">
+	<img src="okk.png">
+	</div>
+</a>
+	<div id="okk">
+		<img src="okk.png">
+	</div>
+	<div id="tt">
+		<img src="sig.png">
+	</div>
+	<div id="hee">
+		<img src="hee.gif">
+	</div>
+	<div id="face1">
+		<img src="face1.png">
+	</div>
+	<div id="face2">
+		<img src="face2.png">
+	</div>
+	<div id="info">
+		<img src="info.png">
+	</div>
+	<div id="pho">
+		<img src="photo.png">
+	</div>
+	<div id="too">
+		<img src="paper1.png">
+	</div>
+
+</div>
+<script type="text/javascript">
+
+
+
+var bbPlay = 0;
+window.onmousemove = function(){
+	bbPlay++;
+	if(bbPlay == 1){walk.play();}
+}
+
+//동물 액자부분
+sigar.onclick = function(){
+			but.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			poom3.style.display = "inline";
+			ooo.style.display = "inline"
+			}
+	ooo.onclick = function(){
+		but.play();
+			poom3.style.display = "none"
+			poom4.style.display = "inline"
+			ooo.style.display = "none"
+			oo.style.display = "inline"
+			sigar.style.display = "none"}
+	oo.onclick = function(){
+		but.play();
+			poom4.style.display = "none"
+			oo.style.display = "none"
+			poom5.style.display = "inline"
+			okk.style.display = "inline"}
+	okk.onclick = function(){
+		but.play();
+			okk.style.display = "none"
+			bx.style.display = "none"
+			poom5.style.display = "none"
+			sigar.style.display = "inline"}
+	
+//헤윤 부분
+	hee.onclick = function(){
+		but.play();
+			bx.style.display = "inline";
+			poom6.style.display = "inline";
+			oooo.style.display = "inline"
+			nn.style.display = "inline"
+			sigar.style.display = "none"
+			face1.style.display = "inline"
+			}
+	oooo.onclick = function(){
+		but.play();
+			oooo.style.display = "none"
+			poom6.style.display = "none"
+			poom7.style.display = "inline"
+			heyy.style.display = "inline"
+			heyy2.style.display = "inline"
+			face1.style.display = "none"
+			face2.style.display = "inline"
+		}
+	heyy.onclick = function(){
+		but.play();
+			poom7.style.display = "none"
+			poom8.style.display = "inline"
+			heyy.style.display = "none"
+			heyy2.style.display = "none"
+			orange1.style.display = "inline"
+			face2.style.display = "none"
+			face1.style.display = "inline"
+		}
+
+	orange1.onclick = function(){
+		but.play();
+			poom8.style.display = "none"
+			poom9.style.display = "inline"
+			orange1.style.display = "none"
+			orange3.style.display = "inline"
+		}
+
+	orange3.onclick = function(){
+		but.play();
+			poom9.style.display = "none"		
+			orange3.style.display = "none"
+			bx.style.display = "none"
+			face1.style.display = "none"
+			poom1.style.display = "none"
+			nn.style.display = "none"
+			sigar.style.display = "inline"
+			info.style.display = "inline"}
+			
+			
+	info.onclick = function(){
+		but.play();
+		openn.play();
+			info.style.display = "none"
+			too.style.display = "inline"
+			pho.style.display = "inline"
+			inn.style.display = "inline"
+			tat.style.display = "inline"
+}
+
+//헤이
+	heyy2.onclick = function(){
+		but.play();
+			poom7.style.display = "none"
+			hey.style.display = "inline"
+			heyy.style.display = "none"
+			heyy2.style.display = "none"
+			orange2.style.display = "inline"
+		}
+
+	orange2.onclick = function(){
+		but.play();
+			orange2.style.display = "none"
+			orange3.style.display = "inline"
+			face2.style.display = "none"
+			face1.style.display = "inline"
+			hey.style.display = "none"
+			poom1.style.display = "inline"}		
+
+too.onclick = function(){
+		but.play();
+		clos.play();
+			too.style.display = "none"
+			pho.style.display = "none"
+			inn.style.display = "none"
+			tat.style.display = "none"
+}
+	//오른쪽으로 꺾을때
+rights.onclick = function(){
+			but.play();
+			bx.style.display = "inline";
+			hey.style.display = "inline";
+			orange3.style.display = "inline";
+			nn.style.display = "inline";
+			sigar.style.display = "none";
+			face1.style.display = "inline";
+			}
+
+	orange4.onclick = function(){
+		but.play();
+			orange4.style.display = "none"
+			orange5.style.display = "inline"
+			face2.style.display = "none"
+			face1.style.display = "inline"
+			poom1.style.display = "none"
+			poom2.style.display = "inline"}			
+	
+//다육이
+da.onclick = function(){
+			but.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			yuk.style.display = "inline";
+			orange6.style.display = "inline"
+			}
+orange6.onclick = function(){
+			but.play();
+			toggle = "on";
+			yuk.style.display = "none";
+			yuk2.style.display = "inline";
+			orange6.style.display = "none"
+			orange7.style.display = "inline"
+			}
+orange7.onclick = function(){
+			but.play();
+			orange7.style.display = "none"
+			bx.style.display = "none"
+			yuk2.style.display = "none"
+			sigar.style.display = "inline"
+			}
+
+//다육이 덩어리
+ye.onclick = function(){
+			but.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			yuk3.style.display = "inline";
+			orange8.style.display = "inline"
+			sigar.style.display = "none"
+			}
+orange8.onclick = function(){
+			but.play();
+			orange8.style.display = "none"
+			bx.style.display = "none"
+			yuk3.style.display = "none"
+			sigar.style.display = "inline"
+			}
+
+
+</script>
+</body>
+</html>
